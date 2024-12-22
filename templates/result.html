@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversion Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Conversion Result</h1>
+    <div class="image-container">
+      <div>
+        <h3>Original Image</h3>
+        <img src="{{ url_for('static', filename=original_image) }}" alt="Original Image" />
+      </div>
+      <div>
+        <h3>Converted Image</h3>
+        <img src="{{ url_for('static', filename=processed_image) }}" alt="Converted Image" />
+      </div>
+    </div>
+    <a href="{{ url_for('static', filename=processed_image) }}" download>Download Processed Image</a>
+    <a href="/">Go Back</a>
+  </div>
+</body>
+
+</html>
